@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* Divine Nine Organization Colors */
+@theme {
+  /* Alpha Phi Alpha - Black & Old Gold */
+  --color-alpha-phi-alpha-primary: #000000;
+  --color-alpha-phi-alpha-secondary: #FFD700;
+
+  /* Kappa Alpha Psi - Crimson & Cream */
+  --color-kappa-primary: #DC143C;
+  --color-kappa-secondary: #FFFDD0;
+
+  /* Omega Psi Phi - Royal Purple & Old Gold */
+  --color-omega-primary: #6B3FA0;
+  --color-omega-secondary: #FFD700;
+
+  /* Phi Beta Sigma - Royal Blue & Pure White */
+  --color-sigma-primary: #002D62;
+  --color-sigma-secondary: #FFFFFF;
+
+  /* Iota Phi Theta - Charcoal Brown & Gilded Gold */
+  --color-iota-primary: #36454F;
+  --color-iota-secondary: #CFB53B;
+
+  /* Alpha Kappa Alpha - Salmon Pink & Apple Green */
+  --color-aka-primary: #FA8072;
+  --color-aka-secondary: #8DB600;
+
+  /* Delta Sigma Theta - Crimson & Cream */
+  --color-delta-primary: #DC143C;
+  --color-delta-secondary: #FFFDD0;
+
+  /* Zeta Phi Beta - Royal Blue & Pure White */
+  --color-zeta-primary: #002D62;
+  --color-zeta-secondary: #FFFFFF;
+
+  /* Sigma Gamma Rho - Royal Blue & Gold */
+  --color-sgr-primary: #002D62;
+  --color-sgr-secondary: #FFD700;
+
+  /* Brand Colors */
+  --color-brand-gold: #C9A227;
+  --color-brand-dark: #1A1A1A;
+  --color-brand-cream: #FAF7F2;
+
+  /* Spacing */
+  --spacing-section: 6rem;
+
+  /* Fonts */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .gradient-shine {
+    background: linear-gradient(
+      110deg,
+      transparent 25%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 75%
+    );
+    background-size: 200% 100%;
+    animation: shine 3s infinite;
+  }
+}
+
+@keyframes shine {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
